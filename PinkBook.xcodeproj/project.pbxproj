@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		366A5B679A973A5353F355A8 /* Pods_PinkBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1E00BEE93B0EF281BC5AE38 /* Pods_PinkBook.framework */; };
 		9B67128A28AE5F47009776CB /* PinkTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B67128928AE5F47009776CB /* PinkTabBarViewController.swift */; };
 		9B70E29A28AE0BEF006B41DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B70E29928AE0BEF006B41DD /* AppDelegate.swift */; };
 		9B70E29C28AE0BEF006B41DD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B70E29B28AE0BEF006B41DD /* SceneDelegate.swift */; };
@@ -28,6 +29,9 @@
 		9B70E2A528AE0BF0006B41DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9B70E2A828AE0BF0006B41DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9B70E2AA28AE0BF0006B41DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF943718BC50D1C772346A89 /* Pods-PinkBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PinkBook.release.xcconfig"; path = "Target Support Files/Pods-PinkBook/Pods-PinkBook.release.xcconfig"; sourceTree = "<group>"; };
+		D1E00BEE93B0EF281BC5AE38 /* Pods_PinkBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PinkBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1A744DD722DA870EA829BB6 /* Pods-PinkBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PinkBook.debug.xcconfig"; path = "Target Support Files/Pods-PinkBook/Pods-PinkBook.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,12 +39,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				366A5B679A973A5353F355A8 /* Pods_PinkBook.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C27273038D6AAD721EF6AFD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D1E00BEE93B0EF281BC5AE38 /* Pods_PinkBook.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7A0009339D0376BF2A9BE5A6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E1A744DD722DA870EA829BB6 /* Pods-PinkBook.debug.xcconfig */,
+				AF943718BC50D1C772346A89 /* Pods-PinkBook.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		9B67128B28AE60D1009776CB /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -54,6 +77,8 @@
 			children = (
 				9B70E29828AE0BEF006B41DD /* PinkBook */,
 				9B70E29728AE0BEF006B41DD /* Products */,
+				7A0009339D0376BF2A9BE5A6 /* Pods */,
+				2C27273038D6AAD721EF6AFD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -88,9 +113,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9B70E2AD28AE0BF0006B41DD /* Build configuration list for PBXNativeTarget "PinkBook" */;
 			buildPhases = (
+				CCA878F9ACE8001F1127A221 /* [CP] Check Pods Manifest.lock */,
 				9B70E29228AE0BEF006B41DD /* Sources */,
 				9B70E29328AE0BEF006B41DD /* Frameworks */,
 				9B70E29428AE0BEF006B41DD /* Resources */,
+				FAA323DC14F185607D8ACB17 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -146,6 +173,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CCA878F9ACE8001F1127A221 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PinkBook-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FAA323DC14F185607D8ACB17 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PinkBook/Pods-PinkBook-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PinkBook/Pods-PinkBook-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PinkBook/Pods-PinkBook-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9B70E29228AE0BEF006B41DD /* Sources */ = {
@@ -298,6 +367,7 @@
 		};
 		9B70E2AE28AE0BF0006B41DD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1A744DD722DA870EA829BB6 /* Pods-PinkBook.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -329,6 +399,7 @@
 		};
 		9B70E2AF28AE0BF0006B41DD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF943718BC50D1C772346A89 /* Pods-PinkBook.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
