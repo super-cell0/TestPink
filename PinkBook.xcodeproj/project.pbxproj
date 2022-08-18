@@ -16,6 +16,10 @@
 		9B70E2A428AE0BEF006B41DD /* PinkBook.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9B70E2A228AE0BEF006B41DD /* PinkBook.xcdatamodeld */; };
 		9B70E2A628AE0BF0006B41DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B70E2A528AE0BF0006B41DD /* Assets.xcassets */; };
 		9B70E2A928AE0BF0006B41DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B70E2A728AE0BF0006B41DD /* LaunchScreen.storyboard */; };
+		9B8C938A28AE90FF005531B0 /* FollowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8C938928AE90FF005531B0 /* FollowViewController.swift */; };
+		9B8C938C28AE9116005531B0 /* DiscoveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8C938B28AE9116005531B0 /* DiscoveryViewController.swift */; };
+		9B8C938E28AE912A005531B0 /* NearByViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8C938D28AE912A005531B0 /* NearByViewController.swift */; };
+		9B8C939128AE9273005531B0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8C939028AE9273005531B0 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +33,10 @@
 		9B70E2A528AE0BF0006B41DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9B70E2A828AE0BF0006B41DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9B70E2AA28AE0BF0006B41DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B8C938928AE90FF005531B0 /* FollowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowViewController.swift; sourceTree = "<group>"; };
+		9B8C938B28AE9116005531B0 /* DiscoveryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryViewController.swift; sourceTree = "<group>"; };
+		9B8C938D28AE912A005531B0 /* NearByViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearByViewController.swift; sourceTree = "<group>"; };
+		9B8C939028AE9273005531B0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		AF943718BC50D1C772346A89 /* Pods-PinkBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PinkBook.release.xcconfig"; path = "Target Support Files/Pods-PinkBook/Pods-PinkBook.release.xcconfig"; sourceTree = "<group>"; };
 		D1E00BEE93B0EF281BC5AE38 /* Pods_PinkBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PinkBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1A744DD722DA870EA829BB6 /* Pods-PinkBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PinkBook.debug.xcconfig"; path = "Target Support Files/Pods-PinkBook/Pods-PinkBook.debug.xcconfig"; sourceTree = "<group>"; };
@@ -60,7 +68,6 @@
 				E1A744DD722DA870EA829BB6 /* Pods-PinkBook.debug.xcconfig */,
 				AF943718BC50D1C772346A89 /* Pods-PinkBook.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -68,6 +75,9 @@
 			isa = PBXGroup;
 			children = (
 				9B70E29D28AE0BEF006B41DD /* HomeViewController.swift */,
+				9B8C938B28AE9116005531B0 /* DiscoveryViewController.swift */,
+				9B8C938928AE90FF005531B0 /* FollowViewController.swift */,
+				9B8C938D28AE912A005531B0 /* NearByViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -97,6 +107,7 @@
 				9B70E29B28AE0BEF006B41DD /* SceneDelegate.swift */,
 				9B67128928AE5F47009776CB /* PinkTabBarViewController.swift */,
 				9B70E29F28AE0BEF006B41DD /* Main.storyboard */,
+				9B8C938F28AE924E005531B0 /* Source */,
 				9B67128B28AE60D1009776CB /* Home */,
 				9B70E2A528AE0BF0006B41DD /* Assets.xcassets */,
 				9B70E2A728AE0BF0006B41DD /* LaunchScreen.storyboard */,
@@ -104,6 +115,14 @@
 				9B70E2A228AE0BEF006B41DD /* PinkBook.xcdatamodeld */,
 			);
 			path = PinkBook;
+			sourceTree = "<group>";
+		};
+		9B8C938F28AE924E005531B0 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				9B8C939028AE9273005531B0 /* Constants.swift */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,8 +243,12 @@
 				9B70E29E28AE0BEF006B41DD /* HomeViewController.swift in Sources */,
 				9B70E29A28AE0BEF006B41DD /* AppDelegate.swift in Sources */,
 				9B70E2A428AE0BEF006B41DD /* PinkBook.xcdatamodeld in Sources */,
+				9B8C938C28AE9116005531B0 /* DiscoveryViewController.swift in Sources */,
+				9B8C938A28AE90FF005531B0 /* FollowViewController.swift in Sources */,
+				9B8C938E28AE912A005531B0 /* NearByViewController.swift in Sources */,
 				9B67128A28AE5F47009776CB /* PinkTabBarViewController.swift in Sources */,
 				9B70E29C28AE0BEF006B41DD /* SceneDelegate.swift in Sources */,
+				9B8C939128AE9273005531B0 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
