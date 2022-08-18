@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B67128A28AE5F47009776CB /* PinkTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B67128928AE5F47009776CB /* PinkTabBarViewController.swift */; };
 		9B70E29A28AE0BEF006B41DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B70E29928AE0BEF006B41DD /* AppDelegate.swift */; };
 		9B70E29C28AE0BEF006B41DD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B70E29B28AE0BEF006B41DD /* SceneDelegate.swift */; };
-		9B70E29E28AE0BEF006B41DD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B70E29D28AE0BEF006B41DD /* ViewController.swift */; };
+		9B70E29E28AE0BEF006B41DD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B70E29D28AE0BEF006B41DD /* HomeViewController.swift */; };
 		9B70E2A128AE0BEF006B41DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B70E29F28AE0BEF006B41DD /* Main.storyboard */; };
 		9B70E2A428AE0BEF006B41DD /* PinkBook.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9B70E2A228AE0BEF006B41DD /* PinkBook.xcdatamodeld */; };
 		9B70E2A628AE0BF0006B41DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B70E2A528AE0BF0006B41DD /* Assets.xcassets */; };
@@ -17,10 +18,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9B67128928AE5F47009776CB /* PinkTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinkTabBarViewController.swift; sourceTree = "<group>"; };
 		9B70E29628AE0BEF006B41DD /* PinkBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PinkBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B70E29928AE0BEF006B41DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B70E29B28AE0BEF006B41DD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9B70E29D28AE0BEF006B41DD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9B70E29D28AE0BEF006B41DD /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		9B70E2A028AE0BEF006B41DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9B70E2A328AE0BEF006B41DD /* PinkBook.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PinkBook.xcdatamodel; sourceTree = "<group>"; };
 		9B70E2A528AE0BF0006B41DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -39,6 +41,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9B67128B28AE60D1009776CB /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				9B70E29D28AE0BEF006B41DD /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		9B70E28D28AE0BEF006B41DD = {
 			isa = PBXGroup;
 			children = (
@@ -60,8 +70,9 @@
 			children = (
 				9B70E29928AE0BEF006B41DD /* AppDelegate.swift */,
 				9B70E29B28AE0BEF006B41DD /* SceneDelegate.swift */,
-				9B70E29D28AE0BEF006B41DD /* ViewController.swift */,
+				9B67128928AE5F47009776CB /* PinkTabBarViewController.swift */,
 				9B70E29F28AE0BEF006B41DD /* Main.storyboard */,
+				9B67128B28AE60D1009776CB /* Home */,
 				9B70E2A528AE0BF0006B41DD /* Assets.xcassets */,
 				9B70E2A728AE0BF0006B41DD /* LaunchScreen.storyboard */,
 				9B70E2AA28AE0BF0006B41DD /* Info.plist */,
@@ -141,9 +152,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B70E29E28AE0BEF006B41DD /* ViewController.swift in Sources */,
+				9B70E29E28AE0BEF006B41DD /* HomeViewController.swift in Sources */,
 				9B70E29A28AE0BEF006B41DD /* AppDelegate.swift in Sources */,
 				9B70E2A428AE0BEF006B41DD /* PinkBook.xcdatamodeld in Sources */,
+				9B67128A28AE5F47009776CB /* PinkTabBarViewController.swift in Sources */,
 				9B70E29C28AE0BEF006B41DD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,11 +306,14 @@
 				DEVELOPMENT_TEAM = XNM269JAPT;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PinkBook/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "小粉书";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -308,7 +323,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -322,11 +337,14 @@
 				DEVELOPMENT_TEAM = XNM269JAPT;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PinkBook/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "小粉书";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -336,7 +354,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
