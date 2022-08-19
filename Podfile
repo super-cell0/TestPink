@@ -8,5 +8,7 @@ target 'PinkBook' do
   # Pods for PinkBook
   #横滑的tab栏
   pod 'XLPagerTabStrip', '~> 9.0'
+  #首页瀑布流
+  pod 'CHTCollectionViewWaterfallLayout'
 
 end

@@ -51,6 +51,10 @@ class HomeViewController: ButtonBarPagerTabStripViewController {
         
         //左右View距离侧边屏幕的滑动效果
         self.containerView.bounces = false
+        
+//        DispatchQueue.main.sync {
+//            self.moveToViewController(at: 1, animated: true)
+//        }
 
     }
     
