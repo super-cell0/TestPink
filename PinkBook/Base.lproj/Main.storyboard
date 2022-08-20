@@ -258,7 +258,7 @@
         <!--发布-->
         <scene sceneID="EY7-Wp-Ytd">
             <objects>
-                <viewController id="4Bp-qJ-yO9" sceneMemberID="viewController">
+                <viewController id="4Bp-qJ-yO9" customClass="PostViewController" customModule="PinkBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="seu-L5-PqK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
