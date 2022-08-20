@@ -10,5 +10,7 @@ target 'PinkBook' do
   pod 'XLPagerTabStrip', '~> 9.0'
   #首页瀑布流
   pod 'CHTCollectionViewWaterfallLayout'
+  #x选取照片
+  pod 'YPImagePicker'
 
 end
