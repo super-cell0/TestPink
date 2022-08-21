@@ -93,6 +93,7 @@ extension PinkBookTabBarController: UITabBarControllerDelegate {
 //                    print(photo.image) // Final image selected by the user
 //                    print(photo.originalImage) // original image selected by the user, unfiltered
 //                }
+                //picker.pushViewController(<#T##viewController: UIViewController##UIViewController#>, animated: <#T##Bool#>)
                 picker.dismiss(animated: true, completion: nil)
             }
             present(picker, animated: true, completion: nil)

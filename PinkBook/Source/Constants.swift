@@ -14,6 +14,8 @@ let kNearByVCID = "NearByViewControllerID"
 
 let kWaterfallCollectionVCID = "WaterfallCollectionVCID"
 
+let kNoteEditViewControllerID = "NoteEditViewControllerID"
+
 //CellID
 let kWaterfallCellID = "WaterfallCellID"
 ///标签

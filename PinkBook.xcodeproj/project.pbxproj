@@ -24,6 +24,7 @@
 		9B8C939128AE9273005531B0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8C939028AE9273005531B0 /* Constants.swift */; };
 		9BA35A9528AFE4BC00E51FD5 /* WaterfallCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA35A9428AFE4BC00E51FD5 /* WaterfallCollectionVC.swift */; };
 		9BA35A9728AFEA5700E51FD5 /* WaterfallCollectionVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA35A9628AFEA5700E51FD5 /* WaterfallCollectionVCell.swift */; };
+		9BD1D6DB28B2345D0066162C /* NoteEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD1D6DA28B2345D0066162C /* NoteEditViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		9B8C939028AE9273005531B0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9BA35A9428AFE4BC00E51FD5 /* WaterfallCollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterfallCollectionVC.swift; sourceTree = "<group>"; };
 		9BA35A9628AFEA5700E51FD5 /* WaterfallCollectionVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterfallCollectionVCell.swift; sourceTree = "<group>"; };
+		9BD1D6DA28B2345D0066162C /* NoteEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteEditViewController.swift; sourceTree = "<group>"; };
 		AF943718BC50D1C772346A89 /* Pods-PinkBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PinkBook.release.xcconfig"; path = "Target Support Files/Pods-PinkBook/Pods-PinkBook.release.xcconfig"; sourceTree = "<group>"; };
 		D1E00BEE93B0EF281BC5AE38 /* Pods_PinkBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PinkBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1A744DD722DA870EA829BB6 /* Pods-PinkBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PinkBook.debug.xcconfig"; path = "Target Support Files/Pods-PinkBook/Pods-PinkBook.debug.xcconfig"; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				9B6FAE7F28B0DEEA00F24D9E /* PostViewController.swift */,
+				9BD1D6DA28B2345D0066162C /* NoteEditViewController.swift */,
 			);
 			path = Post;
 			sourceTree = "<group>";
@@ -136,8 +139,8 @@
 		9B8C938F28AE924E005531B0 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				9B67128928AE5F47009776CB /* PinkBookTabBarController.swift */,
 				9B8C939028AE9273005531B0 /* Constants.swift */,
+				9B67128928AE5F47009776CB /* PinkBookTabBarController.swift */,
 				9BA35A9428AFE4BC00E51FD5 /* WaterfallCollectionVC.swift */,
 				9BA35A9628AFEA5700E51FD5 /* WaterfallCollectionVCell.swift */,
 				9B6FAE8128B0E9E200F24D9E /* Extensions.swift */,
@@ -262,6 +265,7 @@
 			files = (
 				9B6FAE8028B0DEEA00F24D9E /* PostViewController.swift in Sources */,
 				9B70E29E28AE0BEF006B41DD /* HomeViewController.swift in Sources */,
+				9BD1D6DB28B2345D0066162C /* NoteEditViewController.swift in Sources */,
 				9B70E29A28AE0BEF006B41DD /* AppDelegate.swift in Sources */,
 				9B70E2A428AE0BEF006B41DD /* PinkBook.xcdatamodeld in Sources */,
 				9BA35A9728AFEA5700E51FD5 /* WaterfallCollectionVCell.swift in Sources */,

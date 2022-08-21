@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2xC-ct-YyK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pMD-Ib-Mse">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -270,6 +270,48 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tAd-va-jFS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1119" y="-372"/>
+        </scene>
+        <!--Note Edit View Controller-->
+        <scene sceneID="hAC-40-qIK">
+            <objects>
+                <viewController storyboardIdentifier="NoteEditViewControllerID" id="pMD-Ib-Mse" customClass="NoteEditViewController" customModule="PinkBook" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dj7-NM-zrp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ST5-8h-WK3">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zyt-Pk-FnK">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="852"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="zyt-Pk-FnK" firstAttribute="leading" secondItem="Qjd-30-04m" secondAttribute="leading" id="KPn-ns-xOx"/>
+                                    <constraint firstItem="zyt-Pk-FnK" firstAttribute="bottom" secondItem="Qjd-30-04m" secondAttribute="bottom" id="OGa-91-ZbI"/>
+                                    <constraint firstItem="zyt-Pk-FnK" firstAttribute="width" secondItem="ST5-8h-WK3" secondAttribute="width" id="TpD-zb-z7Z"/>
+                                    <constraint firstItem="zyt-Pk-FnK" firstAttribute="trailing" secondItem="Qjd-30-04m" secondAttribute="trailing" id="brs-gY-aix"/>
+                                    <constraint firstItem="zyt-Pk-FnK" firstAttribute="height" secondItem="ST5-8h-WK3" secondAttribute="height" id="gwv-8q-XmM"/>
+                                    <constraint firstItem="zyt-Pk-FnK" firstAttribute="top" secondItem="Qjd-30-04m" secondAttribute="top" id="wBA-ZQ-M1o"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="Qjd-30-04m"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="ZVW-EE-0q6"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xQ4-4v-6Oc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="ST5-8h-WK3" secondAttribute="bottom" id="aS3-Si-kPY"/>
+                            <constraint firstItem="ST5-8h-WK3" firstAttribute="trailing" secondItem="xQ4-4v-6Oc" secondAttribute="trailing" id="cbq-Kx-V3F"/>
+                            <constraint firstItem="ST5-8h-WK3" firstAttribute="leading" secondItem="xQ4-4v-6Oc" secondAttribute="leading" id="hki-Af-8Ao"/>
+                            <constraint firstItem="ST5-8h-WK3" firstAttribute="top" secondItem="xQ4-4v-6Oc" secondAttribute="top" id="uB9-7k-UrE"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N7z-ng-E0G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1928.985507246377" y="-372.32142857142856"/>
         </scene>
         <!--Pink Book Tab Bar Controller-->
         <scene sceneID="hLa-Eq-DDz">
