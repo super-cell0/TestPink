@@ -271,10 +271,10 @@
             </objects>
             <point key="canvasLocation" x="1119" y="-372"/>
         </scene>
-        <!--Pink Tab Bar View Controller-->
+        <!--Pink Book Tab Bar Controller-->
         <scene sceneID="hLa-Eq-DDz">
             <objects>
-                <tabBarController id="2xC-ct-YyK" customClass="PinkTabBarViewController" customModule="PinkBook" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController id="2xC-ct-YyK" customClass="PinkBookTabBarController" customModule="PinkBook" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HHB-77-di0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

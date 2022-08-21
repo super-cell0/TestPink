@@ -16,5 +16,5 @@ let kWaterfallCollectionVCID = "WaterfallCollectionVCID"
 
 //CellID
 let kWaterfallCellID = "WaterfallCellID"
-
+///标签
 let kChannels = ["推荐","旅行","娱乐","才艺","美妆","生活","美食","萌宠"]

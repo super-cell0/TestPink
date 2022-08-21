@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		366A5B679A973A5353F355A8 /* Pods_PinkBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1E00BEE93B0EF281BC5AE38 /* Pods_PinkBook.framework */; };
-		9B67128A28AE5F47009776CB /* PinkTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B67128928AE5F47009776CB /* PinkTabBarViewController.swift */; };
+		9B67128A28AE5F47009776CB /* PinkBookTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B67128928AE5F47009776CB /* PinkBookTabBarController.swift */; };
 		9B6FAE8028B0DEEA00F24D9E /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6FAE7F28B0DEEA00F24D9E /* PostViewController.swift */; };
 		9B6FAE8228B0E9E200F24D9E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6FAE8128B0E9E200F24D9E /* Extensions.swift */; };
 		9B70E29A28AE0BEF006B41DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B70E29928AE0BEF006B41DD /* AppDelegate.swift */; };
@@ -27,7 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9B67128928AE5F47009776CB /* PinkTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinkTabBarViewController.swift; sourceTree = "<group>"; };
+		9B67128928AE5F47009776CB /* PinkBookTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinkBookTabBarController.swift; sourceTree = "<group>"; };
 		9B6FAE7F28B0DEEA00F24D9E /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		9B6FAE8128B0E9E200F24D9E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		9B70E29628AE0BEF006B41DD /* PinkBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PinkBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -136,7 +136,7 @@
 		9B8C938F28AE924E005531B0 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				9B67128928AE5F47009776CB /* PinkTabBarViewController.swift */,
+				9B67128928AE5F47009776CB /* PinkBookTabBarController.swift */,
 				9B8C939028AE9273005531B0 /* Constants.swift */,
 				9BA35A9428AFE4BC00E51FD5 /* WaterfallCollectionVC.swift */,
 				9BA35A9628AFEA5700E51FD5 /* WaterfallCollectionVCell.swift */,
@@ -270,7 +270,7 @@
 				9B8C938A28AE90FF005531B0 /* FollowViewController.swift in Sources */,
 				9B6FAE8228B0E9E200F24D9E /* Extensions.swift in Sources */,
 				9B8C938E28AE912A005531B0 /* NearByViewController.swift in Sources */,
-				9B67128A28AE5F47009776CB /* PinkTabBarViewController.swift in Sources */,
+				9B67128A28AE5F47009776CB /* PinkBookTabBarController.swift in Sources */,
 				9B70E29C28AE0BEF006B41DD /* SceneDelegate.swift in Sources */,
 				9B8C939128AE9273005531B0 /* Constants.swift in Sources */,
 			);

@@ -7,8 +7,9 @@
 
 import UIKit
 import YPImagePicker
+import AVKit
 
-class PinkTabBarViewController: UITabBarController {
+class PinkBookTabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,9 +30,11 @@ class PinkTabBarViewController: UITabBarController {
 
 }
 
-extension PinkTabBarViewController: UITabBarControllerDelegate {
+extension PinkBookTabBarController: UITabBarControllerDelegate {
     func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
-        if let vc = viewController as? PostViewController {
+        if let _ = viewController as? PostViewController {
+            
+            //MARK: -待做登陆判断
             
             var config = YPImagePickerConfiguration()
             //MARK: -通用配置
@@ -60,22 +63,36 @@ extension PinkTabBarViewController: UITabBarControllerDelegate {
             config.library.minWidthForItem = nil
             config.library.mediaType = YPlibraryMediaType.photo
             config.library.defaultMultipleSelection = true//多选按钮的初始状态。
-            config.library.maxNumberOfItems = 9
-            config.library.minNumberOfItems = 1
+            config.library.maxNumberOfItems = 9//最大选择照片数量
+            config.library.minNumberOfItems = 1//最小选择照片数量
             config.library.numberOfItemsInRow = 4
-            config.library.spacingBetweenItems = 1.0
-            config.library.skipSelectionsGallery = false
+            config.library.spacingBetweenItems = 2.0
+            config.library.skipSelectionsGallery = false//选择多个照片后是否跳过编辑页面
             config.library.preselectedItems = nil
             config.library.preSelectItemOnMultipleSelection = true//多选的时候预选第一张图片
             
+            //MARK: -视频配置
+            config.video.compression = AVAssetExportPresetHighestQuality
+            config.video.fileType = .mov
+            config.video.recordingTimeLimit = 60.0
+            config.video.libraryTimeLimit = 60.0//视频max长度
+            config.video.minimumTimeLimit = 3.0//视频min长度
+            config.video.trimmerMaxDuration = 60.0//剪辑的最长时长
+            config.video.trimmerMinDuration = 3.0
+            
+            config.gallery.hidesRemoveButton = false//多选照片后进入编辑页面 可以删除照片
+            
             let picker = YPImagePicker(configuration: config)
 
-            picker.didFinishPicking { [unowned picker] items, _ in
-                if let photo = items.singlePhoto {
-                    print(photo.fromCamera) // Image source (camera or library)
-                    print(photo.image) // Final image selected by the user
-                    print(photo.originalImage) // original image selected by the user, unfiltered
+            picker.didFinishPicking { [unowned picker] items, cancelled in
+                if cancelled {
+                    print("用户点击了左上角取消按钮")
                 }
+//                if let photo = items.singlePhoto {
+//                    print(photo.fromCamera) // Image source (camera or library)
+//                    print(photo.image) // Final image selected by the user
+//                    print(photo.originalImage) // original image selected by the user, unfiltered
+//                }
                 picker.dismiss(animated: true, completion: nil)
             }
             present(picker, animated: true, completion: nil)
@@ -85,4 +102,5 @@ extension PinkTabBarViewController: UITabBarControllerDelegate {
             return true
         }
     }
+    
 }
