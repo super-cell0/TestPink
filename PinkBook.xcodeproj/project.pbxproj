@@ -44,6 +44,7 @@
 		9B70E2AA28AE0BF0006B41DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B74E61B28B70214009883F3 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		9B74E61D28B710F3009883F3 /* PhotoFooterCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoFooterCollectionReusableView.swift; sourceTree = "<group>"; };
+		9B74E62028B7BC31009883F3 /* PinkBook-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PinkBook-Bridging-Header.h"; sourceTree = "<group>"; };
 		9B8C938928AE90FF005531B0 /* FollowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowViewController.swift; sourceTree = "<group>"; };
 		9B8C938B28AE9116005531B0 /* DiscoveryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryViewController.swift; sourceTree = "<group>"; };
 		9B8C938D28AE912A005531B0 /* NearByViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearByViewController.swift; sourceTree = "<group>"; };
@@ -138,6 +139,7 @@
 				9B70E2A728AE0BF0006B41DD /* LaunchScreen.storyboard */,
 				9B70E2AA28AE0BF0006B41DD /* Info.plist */,
 				9B70E2A228AE0BEF006B41DD /* PinkBook.xcdatamodeld */,
+				9B74E62028B7BC31009883F3 /* PinkBook-Bridging-Header.h */,
 			);
 			path = PinkBook;
 			sourceTree = "<group>";
@@ -451,6 +453,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "beidixiaoxiong-icloud.com.PinkBook";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "PinkBook/PinkBook-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -483,6 +486,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "beidixiaoxiong-icloud.com.PinkBook";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "PinkBook/PinkBook-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

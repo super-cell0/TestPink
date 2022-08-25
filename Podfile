@@ -12,5 +12,9 @@ target 'PinkBook' do
   pod 'CHTCollectionViewWaterfallLayout'
   #x选取照片
   pod 'YPImagePicker'
+  #提示框
+  pod 'MBProgressHUD', '~> 1.2.0'
+  #图片预览
+  pod 'SKPhotoBrowser'
 
 end

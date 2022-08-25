@@ -88,12 +88,20 @@ extension PinkBookTabBarController: UITabBarControllerDelegate {
                 if cancelled {
                     print("用户点击了左上角取消按钮")
                 }
+                for item in items {
+                    switch item {
+                    case let .photo(photo):
+                        print(photo)
+                    case .video(let video):
+                        print(video)
+
+                    }
+                }
 //                if let photo = items.singlePhoto {
 //                    print(photo.fromCamera) // Image source (camera or library)
 //                    print(photo.image) // Final image selected by the user
 //                    print(photo.originalImage) // original image selected by the user, unfiltered
 //                }
-                //picker.pushViewController(<#T##viewController: UIViewController##UIViewController#>, animated: <#T##Bool#>)
                 picker.dismiss(animated: true, completion: nil)
             }
             present(picker, animated: true, completion: nil)

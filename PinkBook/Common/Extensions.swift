@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import MBProgressHUD
 
 extension UIView {
     @IBInspectable
@@ -19,3 +20,13 @@ extension UIView {
     }
 }
 
+extension UIViewController {
+    ///提示框-可选择样式
+    func showTextHUD(HeaderTitle title: String, subTitle sTitle: String? = nil) {
+        let hud = MBProgressHUD.showAdded(to: self.view, animated: true)
+        hud.mode = .text
+        hud.label.text = title
+        hud.detailsLabel.text = sTitle
+        hud.hide(animated: true, afterDelay: 2)
+    }
+}
