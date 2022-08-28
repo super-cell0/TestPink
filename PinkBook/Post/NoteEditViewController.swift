@@ -12,13 +12,17 @@ import MBProgressHUD
 import SKPhotoBrowser
 
 class NoteEditViewController: UIViewController {
-
+    
+    //var videoURL: URL = Bundle.main.url(forResource: "testVideo", withExtension: ".mp4")!
+    var videoURL: URL?
+    var isVideo: Bool { videoURL != nil }
     var photos = [
         UIImage(named: "1")!, UIImage(named: "2")!
     ]
     @IBOutlet weak var photoCollectionView: UICollectionView!
     var photoCount: Int{ photos.count }
     
+    //MARK: -viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -28,6 +32,9 @@ class NoteEditViewController: UIViewController {
         self.photoCollectionView.dataSource = self
         self.photoCollectionView.showsVerticalScrollIndicator = false
         self.photoCollectionView.showsHorizontalScrollIndicator = false
+        self.photoCollectionView.dragDelegate = self
+        self.photoCollectionView.dropDelegate = self
+        self.photoCollectionView.dragInteractionEnabled = true
     }
     
 
@@ -55,6 +62,7 @@ extension NoteEditViewController: UICollectionViewDataSource, UICollectionViewDe
         return cell
     }
     
+    //MARK: -viewForSupplementaryElementOfKind
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         switch kind {
         case UICollectionView.elementKindSectionFooter:
@@ -67,29 +75,39 @@ extension NoteEditViewController: UICollectionViewDataSource, UICollectionViewDe
         }
     }
     
+    //MARK: -选取展示预览图
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //选取展示预览图
-        // 1. create SKPhoto Array from UIImage
-        var images: [SKPhoto] = []
-        for photo in photos {
-            images.append(SKPhoto.photoWithImage(photo))
-        }
-        // 2. create PhotoBrowser Instance, and present from your viewController.
-        //let browser = SKPhotoBrowser(photos: images)
-        //browser.initializePageIndex(indexPath.item)
-        let browser = SKPhotoBrowser(photos: images, initialPageIndex: indexPath.item)
         
-        browser.delegate = self
-        SKPhotoBrowserOptions.displayAction = false
-        SKPhotoBrowserOptions.displayDeleteButton = true
-        present(browser, animated: true, completion: nil)
+        if isVideo {
+            let playerVC = AVPlayerViewController()
+            playerVC.player = AVPlayer(url: videoURL! )
+            present(playerVC, animated: true) {
+                //单独传一个视频需要play()才能播放
+                playerVC.player?.play()
+            }
+        } else {
+            // 1. create SKPhoto Array from UIImage
+            var images: [SKPhoto] = []
+            for photo in photos {
+                images.append(SKPhoto.photoWithImage(photo))
+            }
+            // 2. create PhotoBrowser Instance, and present from your viewController.
+            //let browser = SKPhotoBrowser(photos: images)
+            //browser.initializePageIndex(indexPath.item)
+            let browser = SKPhotoBrowser(photos: images, initialPageIndex: indexPath.item)
+            
+            browser.delegate = self
+            SKPhotoBrowserOptions.displayAction = false
+            SKPhotoBrowserOptions.displayDeleteButton = true
+            present(browser, animated: true, completion: nil)
+        }
     }
     
 }
 
 extension NoteEditViewController: SKPhotoBrowserDelegate {
     
-    //预览的照片
+    //MARK: -预览的照片
     func removePhoto(_ browser: SKPhotoBrowser, index: Int, reload: @escaping (() -> Void)) {
         photos.remove(at: index)
         

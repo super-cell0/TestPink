@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		366A5B679A973A5353F355A8 /* Pods_PinkBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1E00BEE93B0EF281BC5AE38 /* Pods_PinkBook.framework */; };
+		9B324FAA28BBAD8500AE0F41 /* testVideo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 9B324FA928BBABA700AE0F41 /* testVideo.mp4 */; };
+		9B324FAC28BBC17200AE0F41 /* NoteEditVC-DragDrop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B324FAB28BBC17200AE0F41 /* NoteEditVC-DragDrop.swift */; };
 		9B67128A28AE5F47009776CB /* PinkBookTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B67128928AE5F47009776CB /* PinkBookTabBarController.swift */; };
 		9B6FAE8028B0DEEA00F24D9E /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6FAE7F28B0DEEA00F24D9E /* PostViewController.swift */; };
 		9B6FAE8228B0E9E200F24D9E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6FAE8128B0E9E200F24D9E /* Extensions.swift */; };
@@ -30,6 +32,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9B324FA928BBABA700AE0F41 /* testVideo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = testVideo.mp4; sourceTree = "<group>"; };
+		9B324FAB28BBC17200AE0F41 /* NoteEditVC-DragDrop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteEditVC-DragDrop.swift"; sourceTree = "<group>"; };
 		9B67128928AE5F47009776CB /* PinkBookTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinkBookTabBarController.swift; sourceTree = "<group>"; };
 		9B6FAE7F28B0DEEA00F24D9E /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		9B6FAE8128B0E9E200F24D9E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -102,6 +106,7 @@
 			children = (
 				9B6FAE7F28B0DEEA00F24D9E /* PostViewController.swift */,
 				9BD1D6DA28B2345D0066162C /* NoteEditViewController.swift */,
+				9B324FAB28BBC17200AE0F41 /* NoteEditVC-DragDrop.swift */,
 				9B74E61B28B70214009883F3 /* PhotoCollectionViewCell.swift */,
 				9B74E61D28B710F3009883F3 /* PhotoFooterCollectionReusableView.swift */,
 			);
@@ -140,6 +145,7 @@
 				9B70E2AA28AE0BF0006B41DD /* Info.plist */,
 				9B70E2A228AE0BEF006B41DD /* PinkBook.xcdatamodeld */,
 				9B74E62028B7BC31009883F3 /* PinkBook-Bridging-Header.h */,
+				9B324FA928BBABA700AE0F41 /* testVideo.mp4 */,
 			);
 			path = PinkBook;
 			sourceTree = "<group>";
@@ -219,6 +225,7 @@
 				9B70E2A928AE0BF0006B41DD /* LaunchScreen.storyboard in Resources */,
 				9B70E2A628AE0BF0006B41DD /* Assets.xcassets in Resources */,
 				9B70E2A128AE0BEF006B41DD /* Main.storyboard in Resources */,
+				9B324FAA28BBAD8500AE0F41 /* testVideo.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,6 +278,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B324FAC28BBC17200AE0F41 /* NoteEditVC-DragDrop.swift in Sources */,
 				9B6FAE8028B0DEEA00F24D9E /* PostViewController.swift in Sources */,
 				9B70E29E28AE0BEF006B41DD /* HomeViewController.swift in Sources */,
 				9BD1D6DB28B2345D0066162C /* NoteEditViewController.swift in Sources */,

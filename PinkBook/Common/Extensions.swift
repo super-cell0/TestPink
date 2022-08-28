@@ -30,3 +30,13 @@ extension UIViewController {
         hud.hide(animated: true, afterDelay: 2)
     }
 }
+
+//extension Bundle{
+//    var appName: String{
+//        if let appName = localizedInfoDictionary?["CFBundleDisplayName"] as? String{
+//            return appName
+//        }else{
+//            return infoDictionary!["CFBundleDisplayName"] as! String
+//        }
+//    }
+//}
