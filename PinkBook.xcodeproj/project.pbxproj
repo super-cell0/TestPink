@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		366A5B679A973A5353F355A8 /* Pods_PinkBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1E00BEE93B0EF281BC5AE38 /* Pods_PinkBook.framework */; };
+		9B26140F28BCF6E6001C5414 /* NoteEditVC-CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B26140E28BCF6E6001C5414 /* NoteEditVC-CollectionView.swift */; };
 		9B324FAA28BBAD8500AE0F41 /* testVideo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 9B324FA928BBABA700AE0F41 /* testVideo.mp4 */; };
 		9B324FAC28BBC17200AE0F41 /* NoteEditVC-DragDrop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B324FAB28BBC17200AE0F41 /* NoteEditVC-DragDrop.swift */; };
 		9B67128A28AE5F47009776CB /* PinkBookTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B67128928AE5F47009776CB /* PinkBookTabBarController.swift */; };
@@ -32,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9B26140E28BCF6E6001C5414 /* NoteEditVC-CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteEditVC-CollectionView.swift"; sourceTree = "<group>"; };
 		9B324FA928BBABA700AE0F41 /* testVideo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = testVideo.mp4; sourceTree = "<group>"; };
 		9B324FAB28BBC17200AE0F41 /* NoteEditVC-DragDrop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteEditVC-DragDrop.swift"; sourceTree = "<group>"; };
 		9B67128928AE5F47009776CB /* PinkBookTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinkBookTabBarController.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 			children = (
 				9B6FAE7F28B0DEEA00F24D9E /* PostViewController.swift */,
 				9BD1D6DA28B2345D0066162C /* NoteEditViewController.swift */,
+				9B26140E28BCF6E6001C5414 /* NoteEditVC-CollectionView.swift */,
 				9B324FAB28BBC17200AE0F41 /* NoteEditVC-DragDrop.swift */,
 				9B74E61B28B70214009883F3 /* PhotoCollectionViewCell.swift */,
 				9B74E61D28B710F3009883F3 /* PhotoFooterCollectionReusableView.swift */,
@@ -289,6 +292,7 @@
 				9BA35A9528AFE4BC00E51FD5 /* WaterfallCollectionVC.swift in Sources */,
 				9B8C938C28AE9116005531B0 /* DiscoveryViewController.swift in Sources */,
 				9B8C938A28AE90FF005531B0 /* FollowViewController.swift in Sources */,
+				9B26140F28BCF6E6001C5414 /* NoteEditVC-CollectionView.swift in Sources */,
 				9B6FAE8228B0E9E200F24D9E /* Extensions.swift in Sources */,
 				9B8C938E28AE912A005531B0 /* NearByViewController.swift in Sources */,
 				9B74E61C28B70214009883F3 /* PhotoCollectionViewCell.swift in Sources */,
@@ -446,6 +450,10 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PinkBook/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "小粉书";
+				INFOPLIST_KEY_NSCameraUsageDescription = "打开后可以拍照";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "打开后可以录制音频";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "打开后可以存储照片和视频";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "打开后可以选择照片";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -458,7 +466,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "beidixiaoxiong-icloud.com.PinkBook";
+				PRODUCT_BUNDLE_IDENTIFIER = "xiaolongxiashashou-icloud.com.PinkBook";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "PinkBook/PinkBook-Bridging-Header.h";
@@ -479,6 +487,10 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PinkBook/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "小粉书";
+				INFOPLIST_KEY_NSCameraUsageDescription = "打开后可以拍照";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "打开后可以录制音频";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "打开后可以存储照片和视频";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "打开后可以选择照片";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -491,7 +503,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "beidixiaoxiong-icloud.com.PinkBook";
+				PRODUCT_BUNDLE_IDENTIFIER = "xiaolongxiashashou-icloud.com.PinkBook";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "PinkBook/PinkBook-Bridging-Header.h";
