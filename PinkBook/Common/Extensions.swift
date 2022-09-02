@@ -8,6 +8,10 @@
 import UIKit
 import MBProgressHUD
 
+extension UITextField {
+    var unwrappedText: String { text ?? "" }
+}
+
 extension UIView {
     @IBInspectable
     var setRadius: CGFloat {
@@ -29,6 +33,17 @@ extension UIViewController {
         hud.detailsLabel.text = sTitle
         hud.hide(animated: true, afterDelay: 2)
     }
+    
+    ///点击空白处关闭键盘
+    func hideKeyboardWhenTappedAround() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        self.view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        self.view.endEditing(true)
+    }
 }
 
 //extension Bundle{
@@ -40,3 +55,4 @@ extension UIViewController {
 //        }
 //    }
 //}
+

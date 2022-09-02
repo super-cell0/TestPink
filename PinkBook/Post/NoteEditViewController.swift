@@ -18,8 +18,10 @@ class NoteEditViewController: UIViewController {
     var photos = [
         UIImage(named: "1")!, UIImage(named: "2")!
     ]
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var photoCollectionView: UICollectionView!
     @IBOutlet weak var titleTextField: UITextField!
+    ///限制title的字数
     @IBOutlet weak var titleCountLabel: UILabel!
     @IBOutlet weak var textView: UITextView!
     
@@ -36,6 +38,13 @@ class NoteEditViewController: UIViewController {
         self.photoCollectionView.dragDelegate = self
         self.photoCollectionView.dropDelegate = self
         self.photoCollectionView.dragInteractionEnabled = true
+        
+        self.titleCountLabel.isHidden = true
+        //滑动页面关闭键盘
+        scrollView.keyboardDismissMode = .onDrag
+        titleTextField.delegate = self
+        hideKeyboardWhenTappedAround()
+        titleCountLabel.text = String(kMaxNoteTitleCount)
     }
     
 
@@ -47,6 +56,38 @@ class NoteEditViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
+    @IBAction func textFieldEditBegin(_ sender: Any) {
+        titleCountLabel.isHidden = false
+    }
+    @IBAction func textFieldEditEnd(_ sender: Any) {
+        titleCountLabel.isHidden = true
+    }
+    @IBAction func textFieldEndOnExit(_ sender: Any) {
+    }
+    //实时显示可输入的字数
+    @IBAction func textFieldEditChanged(_ sender: Any) {
+        titleCountLabel.text = String(kMaxNoteTitleCount - titleTextField.unwrappedText.count)
+    }
 }
 
+extension NoteEditViewController: UITextFieldDelegate {
+    //textFieldEndOnExit与下面的方法实现功能一样
+//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+//        textField.resignFirstResponder()//软键盘消失
+//        return true
+//    }
+    //标题达到字数限制后限制输入
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        //print(textField)//当前输入的文本
+        //print(range)//字符索引
+        //print(string)//当前输入的字符
+        //return titleTextField.unwrappedText.count > 5 ? false : true//返回后不能删除
+        if range.location >= kMaxNoteTitleCount || (textField.unwrappedText.count + string.count) > kMaxNoteTitleCount {
+            showTextHUD(HeaderTitle: "标题最多输入\(kMaxNoteTitleCount)个字符")
+            return false
+        }
+        return true
+        //if语句取反也可以
+    }
+}

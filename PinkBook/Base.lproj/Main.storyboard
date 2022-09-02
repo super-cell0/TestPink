@@ -359,7 +359,13 @@
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="填写标题" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B8A-zI-dBf">
                                                                         <rect key="frame" x="0.0" y="0.0" width="342" height="21"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                                        <textInputTraits key="textInputTraits"/>
+                                                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                                                        <connections>
+                                                                            <action selector="textFieldEditBegin:" destination="pMD-Ib-Mse" eventType="editingDidBegin" id="3f0-TH-IYY"/>
+                                                                            <action selector="textFieldEditChanged:" destination="pMD-Ib-Mse" eventType="editingChanged" id="te5-0u-fXF"/>
+                                                                            <action selector="textFieldEditEnd:" destination="pMD-Ib-Mse" eventType="editingDidEnd" id="oTd-Es-Cvx"/>
+                                                                            <action selector="textFieldEndOnExit:" destination="pMD-Ib-Mse" eventType="editingDidEndOnExit" id="Db9-R7-QI4"/>
+                                                                        </connections>
                                                                     </textField>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gHx-rG-Jbc">
                                                                         <rect key="frame" x="358" y="0.0" width="16" height="21"/>
@@ -437,6 +443,7 @@
                     </view>
                     <connections>
                         <outlet property="photoCollectionView" destination="avi-gm-AeE" id="UhJ-7D-QX6"/>
+                        <outlet property="scrollView" destination="ST5-8h-WK3" id="gTD-Z2-z5W"/>
                         <outlet property="textView" destination="gVR-Yh-9xR" id="sth-Up-d4m"/>
                         <outlet property="titleCountLabel" destination="gHx-rG-Jbc" id="4hJ-oz-fLd"/>
                         <outlet property="titleTextField" destination="B8A-zI-dBf" id="04s-Za-AhE"/>

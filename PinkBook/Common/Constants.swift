@@ -23,3 +23,5 @@ let kPhotoFooterCollectionReusableViewID = "PhotoFooterCollectionReusableViewID"
 let kChannels = ["推荐","旅行","娱乐","才艺","美妆","生活","美食","萌宠"]
 ///最大选择照片的数量
 let kPhotoCount = 9
+///最大标题字符数量
+let kMaxNoteTitleCount = 20
