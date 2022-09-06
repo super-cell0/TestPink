@@ -16,5 +16,7 @@ target 'PinkBook' do
   pod 'MBProgressHUD', '~> 1.2.0'
   #图片预览
   pod 'SKPhotoBrowser'
+  #textView
+  pod 'KMPlaceholderTextView', '~> 1.4.0'
 
 end

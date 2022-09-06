@@ -347,8 +347,8 @@
                                                     </connections>
                                                 </collectionReusableView>
                                             </collectionView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="QKd-DD-LuV">
-                                                <rect key="frame" x="20" y="122" width="374" height="219"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="QKd-DD-LuV">
+                                                <rect key="frame" x="20" y="122" width="374" height="201"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="e1u-7N-0tz">
                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="38"/>
@@ -359,7 +359,7 @@
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="填写标题" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B8A-zI-dBf">
                                                                         <rect key="frame" x="0.0" y="0.0" width="342" height="21"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                                                        <textInputTraits key="textInputTraits" returnKeyType="done" smartInsertDeleteType="no"/>
                                                                         <connections>
                                                                             <action selector="textFieldEditBegin:" destination="pMD-Ib-Mse" eventType="editingDidBegin" id="3f0-TH-IYY"/>
                                                                             <action selector="textFieldEditChanged:" destination="pMD-Ib-Mse" eventType="editingChanged" id="te5-0u-fXF"/>
@@ -367,7 +367,7 @@
                                                                             <action selector="textFieldEndOnExit:" destination="pMD-Ib-Mse" eventType="editingDidEndOnExit" id="Db9-R7-QI4"/>
                                                                         </connections>
                                                                     </textField>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gHx-rG-Jbc">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gHx-rG-Jbc">
                                                                         <rect key="frame" x="358" y="0.0" width="16" height="21"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                                         <color key="textColor" systemColor="tertiaryLabelColor"/>
@@ -385,7 +385,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="fvl-Ug-hbG">
-                                                        <rect key="frame" x="0.0" y="72" width="374" height="147"/>
+                                                        <rect key="frame" x="0.0" y="54" width="374" height="147"/>
                                                         <subviews>
                                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gVR-Yh-9xR">
                                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="130"/>
@@ -393,7 +393,7 @@
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="130" id="AOD-pe-Ysx"/>
                                                                 </constraints>
-                                                                <color key="textColor" systemColor="labelColor"/>
+                                                                <color key="textColor" systemColor="secondaryLabelColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                             </textView>
@@ -483,9 +483,6 @@
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="plus.rectangle.fill" catalog="system" width="128" height="93"/>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

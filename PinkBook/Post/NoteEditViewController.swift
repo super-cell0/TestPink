@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import KMPlaceholderTextView
 
 class NoteEditViewController: UIViewController {
     
@@ -42,9 +43,32 @@ class NoteEditViewController: UIViewController {
         self.titleCountLabel.isHidden = true
         //滑动页面关闭键盘
         scrollView.keyboardDismissMode = .onDrag
-        titleTextField.delegate = self
+        //titleTextField.delegate = self
         hideKeyboardWhenTappedAround()
         titleCountLabel.text = String(kMaxNoteTitleCount)
+        
+        let placeholderTextView = KMPlaceholderTextView(frame: textView.bounds)
+        placeholderTextView.placeholder = "添加正文吧"
+        placeholderTextView.placeholderFont = .systemFont(ofSize: 14)
+        placeholderTextView.textColor = .secondaryLabel
+        textView.addSubview(placeholderTextView)
+        textView.textContainerInset = UIEdgeInsets(top: 0, left: -textView.textContainer.lineFragmentPadding, bottom: 0, right: -textView.textContainer.lineFragmentPadding )
+        //textView.textContainer.lineFragmentPadding = 0//内容缩进
+        //textView.backgroundColor = .systemPink
+        //文本可编辑状态
+        textView.isEditable = true
+        //试图是否可选-是否可复制文字
+        textView.isSelectable = true
+        textView.textColor = .secondaryLabel
+        
+        let mutableParagraphStyle = NSMutableParagraphStyle()
+        mutableParagraphStyle.lineSpacing = 6
+        textView.typingAttributes = [NSAttributedString.Key.paragraphStyle: mutableParagraphStyle]
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
     }
     
 
@@ -67,27 +91,39 @@ class NoteEditViewController: UIViewController {
     }
     //实时显示可输入的字数
     @IBAction func textFieldEditChanged(_ sender: Any) {
+        //针对系统自带键盘输入时的bug-markedTextRange获取高亮状态下的文本 不为nil 就return出去
+        guard titleTextField.markedTextRange == nil else { return }
+        if titleTextField.unwrappedText.count > kMaxNoteTitleCount {
+            titleTextField.text = String(titleTextField.unwrappedText.prefix(kMaxNoteTitleCount))
+            showTextHUD(HeaderTitle: "标题最多输入\(kMaxNoteTitleCount)个字符")
+            //改变光标位置
+            DispatchQueue.main.async {
+                let end = self.titleTextField.endOfDocument//文本最后一个位置
+                self.titleTextField.selectedTextRange = self.titleTextField.textRange(from: end, to: end)
+            }
+            
+        }
         titleCountLabel.text = String(kMaxNoteTitleCount - titleTextField.unwrappedText.count)
     }
 }
 
-extension NoteEditViewController: UITextFieldDelegate {
-    //textFieldEndOnExit与下面的方法实现功能一样
+//extension NoteEditViewController: UITextFieldDelegate {
+//    //textFieldEndOnExit与下面的方法实现功能一样
 //    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
 //        textField.resignFirstResponder()//软键盘消失
 //        return true
 //    }
-    //标题达到字数限制后限制输入
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        //print(textField)//当前输入的文本
-        //print(range)//字符索引
-        //print(string)//当前输入的字符
-        //return titleTextField.unwrappedText.count > 5 ? false : true//返回后不能删除
-        if range.location >= kMaxNoteTitleCount || (textField.unwrappedText.count + string.count) > kMaxNoteTitleCount {
-            showTextHUD(HeaderTitle: "标题最多输入\(kMaxNoteTitleCount)个字符")
-            return false
-        }
-        return true
-        //if语句取反也可以
-    }
-}
+//    //标题达到字数限制后限制输入
+//    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+//        //print(textField)//当前输入的文本
+//        //print(range)//字符索引
+//        //print(string)//当前输入的字符
+//        //return titleTextField.unwrappedText.count > 5 ? false : true//返回后不能删除
+//        if range.location >= kMaxNoteTitleCount || (textField.unwrappedText.count + string.count) > kMaxNoteTitleCount {
+//            showTextHUD(HeaderTitle: "标题最多输入\(kMaxNoteTitleCount)个字符")
+//            return false
+//        }
+//        return true
+//        //if语句取反也可以
+//    }
+//}
