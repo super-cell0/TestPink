@@ -25,3 +25,4 @@ let kChannels = ["推荐","旅行","娱乐","才艺","美妆","生活","美食",
 let kPhotoCount = 9
 ///最大标题字符数量
 let kMaxNoteTitleCount = 20
+let kMaxNoteTextViewCount = 1000

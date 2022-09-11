@@ -26,6 +26,8 @@ class NoteEditViewController: UIViewController {
     @IBOutlet weak var titleCountLabel: UILabel!
     @IBOutlet weak var textView: UITextView!
     
+    var textViewAccessoryViewAs: TextViewAccessoryView { textView.inputAccessoryView as! TextViewAccessoryView }
+    
     //MARK: -viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,36 +46,49 @@ class NoteEditViewController: UIViewController {
         //滑动页面关闭键盘
         scrollView.keyboardDismissMode = .onDrag
         //titleTextField.delegate = self
+        //点击空白处关闭键盘
         hideKeyboardWhenTappedAround()
         titleCountLabel.text = String(kMaxNoteTitleCount)
         
-        let placeholderTextView = KMPlaceholderTextView(frame: textView.bounds)
-        placeholderTextView.placeholder = "添加正文吧"
-        placeholderTextView.placeholderFont = .systemFont(ofSize: 14)
-        placeholderTextView.textColor = .secondaryLabel
-        textView.addSubview(placeholderTextView)
         textView.textContainerInset = UIEdgeInsets(top: 0, left: -textView.textContainer.lineFragmentPadding, bottom: 0, right: -textView.textContainer.lineFragmentPadding )
         //textView.textContainer.lineFragmentPadding = 0//内容缩进
         //textView.backgroundColor = .systemPink
-        //文本可编辑状态
-        textView.isEditable = true
-        //试图是否可选-是否可复制文字
-        textView.isSelectable = true
+        textView.isEditable = true//文本可编辑状态
+        textView.isSelectable = true//试图是否可选-是否可复制文字
         textView.textColor = .secondaryLabel
-        
         let mutableParagraphStyle = NSMutableParagraphStyle()
-        mutableParagraphStyle.lineSpacing = 6
-        textView.typingAttributes = [NSAttributedString.Key.paragraphStyle: mutableParagraphStyle]
+        mutableParagraphStyle.lineSpacing = 6//行间距
+        let typingAttributes: [NSAttributedString.Key: Any] = [
+            .paragraphStyle: mutableParagraphStyle,
+            .font: UIFont.systemFont(ofSize: 14),
+            .foregroundColor: UIColor.secondaryLabel
+        ]
+        textView.typingAttributes = typingAttributes
+        textView.tintColor = UIColor(named: "mainColor")
+        textView.tintColorDidChange()
+        
+        textView.delegate = self
+        //MARK: TextView键盘上添加控件
+//        if let textViewAccessoryView = Bundle.main.loadNibNamed("TextViewAccessoryView", owner: nil, options: nil)?.first as? TextViewAccessoryView {
+//            textView.inputAccessoryView = textViewAccessoryView
+//            textViewAccessoryViewAs.doneButton.addTarget(self, action: #selector(resignTextView), for: .touchUpInside)
+//            textViewAccessoryViewAs.maxTextCountLabel.text = "/\(kMaxNoteTextViewCount)"
+//        }
+        textView.inputAccessoryView = Bundle.loadInputAccessoryView(formXibName: "TextViewAccessoryView", withType: TextViewAccessoryView.self)
+        textViewAccessoryViewAs.doneButton.addTarget(self, action: #selector(resignTextView), for: .touchUpInside)
+        textViewAccessoryViewAs.maxTextCountLabel.text = "/\(kMaxNoteTextViewCount)"
+        
+
     }
     
+    //MARK: -viewDidLayoutSubviews
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        
     }
     
 
     /*
-    // MARK: - Navigation
+    //MARK: -Navigation
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
@@ -104,6 +119,26 @@ class NoteEditViewController: UIViewController {
             
         }
         titleCountLabel.text = String(kMaxNoteTitleCount - titleTextField.unwrappedText.count)
+    }
+    
+
+    //MARK: -待做存草稿的字符限制-textView
+}
+
+//MARK: -监听函数
+extension NoteEditViewController {
+    @objc private func resignTextView() {
+        textView.resignFirstResponder()//不起作用
+        //self.view.endEditing(true)
+        print("xxxx")
+    }
+}
+
+extension NoteEditViewController: UITextViewDelegate {
+    func textViewDidChange(_ textView: UITextView) {
+        guard textView.markedTextRange == nil else { return }
+        //textViewAccessoryViewAs.textCountLabel.text = "\(textView.text.count)"
+        textViewAccessoryViewAs.currentTextCount = textView.text.count
     }
 }
 
