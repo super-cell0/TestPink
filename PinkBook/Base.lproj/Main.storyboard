@@ -510,6 +510,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="channelIconImageView" destination="NTC-EV-Jp3" id="q5l-09-lnv"/>
+                        <outlet property="channelLabel" destination="PmC-GU-rst" id="iyL-16-suI"/>
+                        <outlet property="channelPlaceholderLabel" destination="h7m-Fc-esS" id="SjF-d0-HW5"/>
                         <outlet property="photoCollectionView" destination="avi-gm-AeE" id="UhJ-7D-QX6"/>
                         <outlet property="scrollView" destination="ST5-8h-WK3" id="gTD-Z2-z5W"/>
                         <outlet property="textView" destination="gVR-Yh-9xR" id="sth-Up-d4m"/>

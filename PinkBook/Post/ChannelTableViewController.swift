@@ -33,7 +33,17 @@ class ChannelTableViewController: UITableViewController {
 
         cell.textLabel?.text = "# \(subChannel[indexPath.row])"
         cell.textLabel?.font = .systemFont(ofSize: 14)
+        cell.selectionStyle = .none
+        
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let channelVC = parent as! ChannelViewController
+        channelVC.ChannelViewDelegate?.updateChannel(channel: self.channel, subChannel: self.subChannel[indexPath.row])
+        
+        dismiss(animated: true)
     }
     
 

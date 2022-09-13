@@ -10,6 +10,9 @@ import KMPlaceholderTextView
 
 class NoteEditViewController: UIViewController {
     
+    //接收传过来的两个值
+    var channel = ""
+    var subChannel = ""
     //var videoURL: URL = Bundle.main.url(forResource: "testVideo", withExtension: ".mp4")!
     var videoURL: URL?
     var isVideo: Bool { videoURL != nil }
@@ -25,6 +28,10 @@ class NoteEditViewController: UIViewController {
     ///限制title的字数
     @IBOutlet weak var titleCountLabel: UILabel!
     @IBOutlet weak var textView: UITextView!
+    //参与话题
+    @IBOutlet weak var channelIconImageView: UIImageView!
+    @IBOutlet weak var channelLabel: UILabel!
+    @IBOutlet weak var channelPlaceholderLabel: UILabel!
     
     var textViewAccessoryViewAs: TextViewAccessoryView { textView.inputAccessoryView as! TextViewAccessoryView }
     
@@ -86,15 +93,12 @@ class NoteEditViewController: UIViewController {
         super.viewDidLayoutSubviews()
     }
     
-
-    /*
-    //MARK: -Navigation
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    //MARK: -Navigation -prepare
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if let channelVC = segue.destination as? ChannelViewController {
+            channelVC.ChannelViewDelegate = self
+        }
     }
-    */
     
     @IBAction func textFieldEditBegin(_ sender: Any) {
         titleCountLabel.isHidden = false
@@ -141,6 +145,22 @@ extension NoteEditViewController: UITextViewDelegate {
         textViewAccessoryViewAs.currentTextCount = textView.text.count
     }
 }
+
+extension NoteEditViewController: ChannelViewControllerDelegate {
+    func updateChannel(channel: String, subChannel: String) {
+        //print(channel)
+        //print(subChannel)
+        //数据
+        self.channel = channel
+        self.subChannel = subChannel
+        //UI
+        channelLabel.text = subChannel
+        channelIconImageView.tintColor = UIColor(named: "modelColor")
+        channelLabel.textColor = UIColor(named: "modelColor")
+        channelPlaceholderLabel.isHidden = true
+    }
+}
+
 
 //extension NoteEditViewController: UITextFieldDelegate {
 //    //textFieldEndOnExit与下面的方法实现功能一样
