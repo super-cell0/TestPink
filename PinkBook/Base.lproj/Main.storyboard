@@ -426,8 +426,8 @@
                                                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="332-lD-CeB">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="78" height="60"/>
                                                                                 <subviews>
-                                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="speaker.wave.2.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="NTC-EV-Jp3">
-                                                                                        <rect key="frame" x="0.0" y="2.5" width="15.5" height="55.5"/>
+                                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="number.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="NTC-EV-Jp3">
+                                                                                        <rect key="frame" x="0.0" y="2" width="15.5" height="55.5"/>
                                                                                         <color key="tintColor" systemColor="labelColor"/>
                                                                                         <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
                                                                                     </imageView>
@@ -634,10 +634,10 @@
         <image name="chevron.forward" catalog="system" width="96" height="128"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="message.fill" catalog="system" width="128" height="113"/>
+        <image name="number.circle.fill" catalog="system" width="128" height="121"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="plus.rectangle.fill" catalog="system" width="128" height="93"/>
-        <image name="speaker.wave.2.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
