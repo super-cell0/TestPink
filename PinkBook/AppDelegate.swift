@@ -12,9 +12,13 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
-
+// 778ab54c3dba161cdd1b1fc71ad2b742
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        AMapServices.shared().enableHTTPS = true
+        AMapServices.shared().apiKey = "778ab54c3dba161cdd1b1fc71ad2b742"
+                
         return true
     }
 

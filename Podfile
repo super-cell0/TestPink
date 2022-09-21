@@ -18,5 +18,7 @@ target 'PinkBook' do
   pod 'SKPhotoBrowser'
   #textView
   pod 'KMPlaceholderTextView', '~> 1.4.0'
+  #高德定位SDK
+  pod 'AMapLocation'
 
 end

@@ -20,7 +20,7 @@ let kWaterfallCellID = "WaterfallCellID"
 let kPhotoCollectionViewCellID = "PhotoCollectionViewCellID"
 let kPhotoFooterCollectionReusableViewID = "PhotoFooterCollectionReusableViewID"
 let kSubChannelCellID = "SubChannelCellID"
-
+let kPOICellID = "POICellID"
 ///标签
 let kChannels = ["推荐","旅行","娱乐","才艺","美妆","生活","美食","萌宠"]
 ///最大选择照片的数量

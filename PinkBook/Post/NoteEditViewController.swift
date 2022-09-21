@@ -10,6 +10,8 @@ import KMPlaceholderTextView
 
 class NoteEditViewController: UIViewController {
     
+    let locationManager = CLLocationManager()
+    
     //接收传过来的两个值
     var channel = ""
     var subChannel = ""
@@ -86,6 +88,10 @@ class NoteEditViewController: UIViewController {
         textViewAccessoryViewAs.maxTextCountLabel.text = "/\(kMaxNoteTextViewCount)"
         
 
+        locationManager.requestWhenInUseAuthorization()
+        AMapLocationManager.updatePrivacyShow(AMapPrivacyShowStatus.didShow, privacyInfo: AMapPrivacyInfoStatus.didContain)
+        AMapLocationManager.updatePrivacyAgree(AMapPrivacyAgreeStatus.didAgree)
+        //待做AmapSearchAPI
     }
     
     //MARK: -viewDidLayoutSubviews

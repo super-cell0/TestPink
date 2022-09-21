@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		366A5B679A973A5353F355A8 /* Pods_PinkBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1E00BEE93B0EF281BC5AE38 /* Pods_PinkBook.framework */; };
+		9B1DD4FD28D89DD5001200D7 /* POITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1DD4FC28D89DD5001200D7 /* POITableViewCell.swift */; };
 		9B26140F28BCF6E6001C5414 /* NoteEditVC-CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B26140E28BCF6E6001C5414 /* NoteEditVC-CollectionView.swift */; };
 		9B2C84CA28C87019002F819B /* TextViewAccessoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B2C84C928C87019002F819B /* TextViewAccessoryView.xib */; };
 		9B2C84CC28C870AF002F819B /* TextViewAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2C84CB28C870AF002F819B /* TextViewAccessoryView.swift */; };
@@ -34,9 +35,11 @@
 		9BD1D6DB28B2345D0066162C /* NoteEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD1D6DA28B2345D0066162C /* NoteEditViewController.swift */; };
 		9BD537C228CEF4E800ABC9F1 /* ChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD537C128CEF4E800ABC9F1 /* ChannelViewController.swift */; };
 		9BD537C428CEFB3800ABC9F1 /* ChannelTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD537C328CEFB3800ABC9F1 /* ChannelTableViewController.swift */; };
+		9BD537C628D07B7A00ABC9F1 /* POIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD537C528D07B7A00ABC9F1 /* POIViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9B1DD4FC28D89DD5001200D7 /* POITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POITableViewCell.swift; sourceTree = "<group>"; };
 		9B26140E28BCF6E6001C5414 /* NoteEditVC-CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteEditVC-CollectionView.swift"; sourceTree = "<group>"; };
 		9B2C84C928C87019002F819B /* TextViewAccessoryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextViewAccessoryView.xib; sourceTree = "<group>"; };
 		9B2C84CB28C870AF002F819B /* TextViewAccessoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewAccessoryView.swift; sourceTree = "<group>"; };
@@ -66,6 +69,7 @@
 		9BD1D6DA28B2345D0066162C /* NoteEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteEditViewController.swift; sourceTree = "<group>"; };
 		9BD537C128CEF4E800ABC9F1 /* ChannelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelViewController.swift; sourceTree = "<group>"; };
 		9BD537C328CEFB3800ABC9F1 /* ChannelTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelTableViewController.swift; sourceTree = "<group>"; };
+		9BD537C528D07B7A00ABC9F1 /* POIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIViewController.swift; sourceTree = "<group>"; };
 		AF943718BC50D1C772346A89 /* Pods-PinkBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PinkBook.release.xcconfig"; path = "Target Support Files/Pods-PinkBook/Pods-PinkBook.release.xcconfig"; sourceTree = "<group>"; };
 		D1E00BEE93B0EF281BC5AE38 /* Pods_PinkBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PinkBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1A744DD722DA870EA829BB6 /* Pods-PinkBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PinkBook.debug.xcconfig"; path = "Target Support Files/Pods-PinkBook/Pods-PinkBook.debug.xcconfig"; sourceTree = "<group>"; };
@@ -124,6 +128,8 @@
 				9B2C84C928C87019002F819B /* TextViewAccessoryView.xib */,
 				9BD537C128CEF4E800ABC9F1 /* ChannelViewController.swift */,
 				9BD537C328CEFB3800ABC9F1 /* ChannelTableViewController.swift */,
+				9BD537C528D07B7A00ABC9F1 /* POIViewController.swift */,
+				9B1DD4FC28D89DD5001200D7 /* POITableViewCell.swift */,
 			);
 			path = Post;
 			sourceTree = "<group>";
@@ -307,9 +313,11 @@
 				9B8C938C28AE9116005531B0 /* DiscoveryViewController.swift in Sources */,
 				9B8C938A28AE90FF005531B0 /* FollowViewController.swift in Sources */,
 				9B26140F28BCF6E6001C5414 /* NoteEditVC-CollectionView.swift in Sources */,
+				9BD537C628D07B7A00ABC9F1 /* POIViewController.swift in Sources */,
 				9B6FAE8228B0E9E200F24D9E /* Extensions.swift in Sources */,
 				9B8C938E28AE912A005531B0 /* NearByViewController.swift in Sources */,
 				9BD537C228CEF4E800ABC9F1 /* ChannelViewController.swift in Sources */,
+				9B1DD4FD28D89DD5001200D7 /* POITableViewCell.swift in Sources */,
 				9B2C84CC28C870AF002F819B /* TextViewAccessoryView.swift in Sources */,
 				9B74E61C28B70214009883F3 /* PhotoCollectionViewCell.swift in Sources */,
 				9B67128A28AE5F47009776CB /* PinkBookTabBarController.swift in Sources */,
