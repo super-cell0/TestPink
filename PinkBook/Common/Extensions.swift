@@ -25,7 +25,20 @@ extension UIView {
 }
 
 extension UIViewController {
-    ///提示框-可选择样式
+    ///加载框-手动隐藏
+    func showLoadHUD(_ title: String? = nil ) {
+        let hud = MBProgressHUD.showAdded(to: self.view, animated: true)
+        hud.label.text = title
+    }
+    ///加载框-手动隐藏
+    func hideLoadHUD() {
+        //ui操作放在主线程执行
+        DispatchQueue.main.async {
+            MBProgressHUD.hide(for: self.view, animated: true)
+        }
+    }
+    
+    ///提示框-可选择样式-自动隐藏
     func showTextHUD(HeaderTitle title: String, subTitle sTitle: String? = nil) {
         let hud = MBProgressHUD.showAdded(to: self.view, animated: true)
         hud.mode = .text

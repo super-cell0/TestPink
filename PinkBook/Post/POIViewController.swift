@@ -28,8 +28,10 @@ class POIViewController: UIViewController {
         //逆地理请求超时时间，最低2s，此处设置为2s
         locationManager.reGeocodeTimeout = 5
         
+        showLoadHUD()
         locationManager.requestLocation(withReGeocode: true, completionBlock: { [weak self] (location: CLLocation?, reGeocode: AMapLocationReGeocode?, error: Error?) in
-                    
+            self?.hideLoadHUD()
+            
             if let error = error {
                 let error = error as NSError
                 
